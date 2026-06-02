@@ -11,13 +11,17 @@ class LifeBots
 	    $data['apikey'] = ''; // API dev key
 	    $data['botname'] = ''; // yourbot resident
 	    $data['secret'] = ''; // secret access code
+	    $data['dataType'] = 'json';
+
 	    $lifeboturl = "https://api.lifebots.cloud/api/bot.html";
+
 	    $ch = curl_init($lifeboturl);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$result = curl_exec($ch);
 		curl_close($ch);
+		
 		$response = json_decode($result, true);
 		if ($response['result'] == 'OK') {
 		    return $response;
