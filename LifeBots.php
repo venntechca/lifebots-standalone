@@ -89,7 +89,7 @@ class LifeBots
 	    }
 	    return true;
 	}
-	public function groupinvite(string $user, string $group, string $role, integer $check = 1) {
+	public function groupinvite(string $user, string $group, string $role, $check = 1) {
 	    $api = $this->request('group_invite', ['avatar' => $user, 'groupuuid' => $group, 
 	    	'roleuuid' => $role, 'check_membership' => $check]);
 	    if (array_key_exists('error', $api)) {
