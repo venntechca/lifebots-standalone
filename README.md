@@ -35,15 +35,6 @@ More features will come in a future update.
 - NealB for making LifeBots for Second Life
 - Venkellie for making this package to work with LifeBots.
 
-Last Update: June 3 2026 (1.0.3)
+Last Update: June 5 2026 (1.0.4)
 
-## CHANGE LOGS
-
-### 1.0.3 June 3 2026
-- Added groupinvite and groupeject
-- skipped 1 and 2 to align with the Laravel version
-- Started recording these change logs
-
-### 1.0.0 June 2 2026
-- forked the Laravel version and converted it to be a standalone
-
+Change logs moved to CHANGELOG.md
