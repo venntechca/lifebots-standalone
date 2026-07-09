@@ -1,7 +1,7 @@
 <?php
 class LifeBots
 {
-	public $NULL_KEY = "00000000-0000-0000-0000-000000000000";
+	public static $NULL_KEY = "00000000-0000-0000-0000-000000000000";
 
 	public function __construct() {}
 
@@ -35,7 +35,7 @@ class LifeBots
 	{
 	    $api = $this->request('name2key', ['name' => $name]);
 	    if (array_key_exists('error', $api)) {
-	        return $this->$NULL_KEY;
+	        return self::$NULL_KEY;
 	    }
 	    return $api['key'];
 	}
@@ -71,7 +71,7 @@ class LifeBots
 	{
 	    $api = $this->request('avatar_info', ['avatar' => $uuid]);
 	    if (array_key_exists('error', $api)) {
-	        return $this->$NULL_KEY;
+	        return self::$NULL_KEY;
 	    }
 	    return $api['image'];
 	}
